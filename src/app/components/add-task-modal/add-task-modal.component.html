@@ -1,0 +1,20 @@
+<div class="modal-overlay">
+  <div class="modal-backdrop" (click)="closeModal()"></div>
+  <div class="add-task-modal">
+    <div class="add-task-modal__header">
+      <h2>Add New Task</h2>
+      <button class="add-task-modal__close-button" (click)="closeModal()">X</button>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+      <div class="add-task-modal__input">
+        <label for="task-title">Title</label>
+        <textarea id="task-title" [formControl]="taskTitle" rows="1" placeholder="add a title..."></textarea>
+      </div>
+      <div class="add-task-modal__input">
+        <label for="task-description">Description</label>
+        <textarea id="task-description" [formControl]="taskDescription" placeholder="add a description..."></textarea>
+      </div>
+      <button class="add-task-modal__submit-button" type="submit" [disabled]="isDisabled">{{ submitButtonText }}</button>
+    </form>
+  </div>
+</div>

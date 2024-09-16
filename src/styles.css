@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #303949;
+  --bg-color: #202A3B;
+  --on-bg-color: #FEFEFE;
+  --default-font-size: 16px;
+
+  --gray: #959595;
+  --green: #2BAC7C;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 32px 64px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--on-bg-color);
+}
+
+p {
+  font-size: var(--default-font-size);
+}
